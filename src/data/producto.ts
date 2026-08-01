@@ -2,7 +2,7 @@ export const marca = {
   nombre: "The Cheese Keeper",
   tagline: "Para los que se toman el queso en serio",
   logo: "/logo.png",
-  email: "fon@laqueseriagijon.com",
+  email: "hola@laqueseriagijon.com",
 };
 
 export const producto = {
