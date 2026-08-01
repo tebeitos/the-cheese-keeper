@@ -347,7 +347,7 @@ import { marca, producto } from '../data/producto';
 	.section-container {
 		max-width: var(--container-width);
 		margin: 0 auto;
-		padding: 6rem 2rem;
+		padding: 4.5rem 2rem;
 		width: 100%;
 	}
 
@@ -388,14 +388,17 @@ import { marca, producto } from '../data/producto';
 	}
 
 	.section-title {
-		font-size: 2.8rem;
+		font-size: 2.3rem; /* Reduced from 2.8rem */
 		letter-spacing: -0.02em;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem; /* Reduced from 2rem */
 	}
 
 	@media (max-width: 768px) {
 		.section-title {
-			font-size: 2.2rem;
+			font-size: 1.85rem; /* Reduced from 2.2rem */
+		}
+		.section-container {
+			padding: 3rem 1.25rem; /* Reduced padding on mobile */
 		}
 	}
 
@@ -710,6 +713,18 @@ import { marca, producto } from '../data/producto';
 		.product-features {
 			grid-template-columns: 1fr;
 			gap: 2rem;
+		}
+
+		.feature-card {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.color-block-card {
+			text-align: center;
+			align-items: center;
 		}
 	}
 
