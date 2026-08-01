@@ -21,10 +21,10 @@ import { marca, producto } from '../data/producto';
 	</head>
 	<body>
 		<main>
-			<!-- 2. Hero Section -->
-			<section class="hero-section">
+			<!-- 2. Hero Section - Desktop Layout -->
+			<section class="hero-section hero-desktop">
 				<div class="hero-col-left">
-					<img src="/quesera-home.jpeg" alt="Quesera artesanal The Cheese Keeper sobre la mesa" class="hero-img-full" />
+					<img src="/quesera-home.png" alt="Quesera artesanal The Cheese Keeper sobre la mesa" class="hero-img-full" />
 				</div>
 				<div class="hero-col-right">
 					<img src="/logo.png" alt="The Cheese Keeper Logo" class="hero-logo-large" />
@@ -33,6 +33,42 @@ import { marca, producto } from '../data/producto';
 						<a href="#reservar" class="hero-menu-link">Reservar</a>
 					</div>
 				</div>
+			</section>
+
+			<!-- 2. Hero Section - Mobile Layout -->
+			<section class="hero-section-mobile hero-mobile">
+				<!-- Barra superior fija -->
+				<div class="mobile-top-bar">
+					<!-- Izquierda: icono hamburguesa -->
+					<button class="mobile-menu-toggle" aria-label="Abrir menú" id="mobileMenuToggle">
+						<span class="line-1"></span>
+						<span class="line-2"></span>
+					</button>
+					
+					<!-- Centro: logo -->
+					<div class="mobile-logo-wrapper">
+						<img src="/logo.png" alt="The Cheese Keeper" class="mobile-logo-img" />
+					</div>
+					
+					<!-- Derecha: botón Reservar -->
+					<div class="mobile-reserve-wrapper">
+						<a href="#reservar" class="mobile-reserve-btn">Reservar</a>
+					</div>
+				</div>
+
+				<!-- Fondo y overlay -->
+				<div class="mobile-hero-bg">
+					<img src="/quesera-home.png" alt="Quesera artesanal" class="mobile-hero-img" />
+					<div class="mobile-hero-overlay"></div>
+				</div>
+				
+				<!-- Dropdown / Panel del menú -->
+				<nav class="mobile-nav-menu" id="mobileNavMenu">
+					<a href="#historia" class="mobile-nav-link">Historia</a>
+					<a href="#producto" class="mobile-nav-link">El Producto</a>
+					<a href="#colores" class="mobile-nav-link">Los Colores</a>
+					<a href="#reservar" class="mobile-nav-link">Reservar</a>
+				</nav>
 			</section>
 
 			<!-- 3. La Historia -->
@@ -221,6 +257,27 @@ import { marca, producto } from '../data/producto';
 				</div>
 			</div>
 		</footer>
+
+		<!-- Mobile Menu Script -->
+		<script>
+			const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+			const mobileNavMenu = document.getElementById('mobileNavMenu');
+			
+			if (mobileMenuToggle && mobileNavMenu) {
+				mobileMenuToggle.addEventListener('click', () => {
+					mobileMenuToggle.classList.toggle('active');
+					mobileNavMenu.classList.toggle('active');
+				});
+				
+				// Cierra el menú al hacer click en un enlace
+				mobileNavMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+					link.addEventListener('click', () => {
+						mobileMenuToggle.classList.remove('active');
+						mobileNavMenu.classList.remove('active');
+					});
+				});
+			}
+		</script>
 	</body>
 </html>
 
@@ -345,14 +402,18 @@ import { marca, producto } from '../data/producto';
 		}
 	}
 
-	/* --- 1. HERO Y NAVEGACIÓN --- */
-	.hero-section {
+	/* --- 1. HERO Y NAVEGACIÓN (ESCRITORIO) --- */
+	.hero-desktop {
 		display: grid;
 		grid-template-columns: 0.6fr 0.4fr;
 		height: 100vh;
 		min-height: 600px;
 		background-color: var(--color-bg);
 		overflow: hidden;
+	}
+
+	.hero-mobile {
+		display: none !important;
 	}
 
 	.hero-col-left {
@@ -421,25 +482,181 @@ import { marca, producto } from '../data/producto';
 		letter-spacing: 0.18em;
 	}
 
+	/* --- NAVEGACIÓN Y HERO (MÓVIL) --- */
 	@media (max-width: 768px) {
-		.hero-section {
-			grid-template-columns: 1fr;
-			height: auto;
-			min-height: auto;
+		.hero-desktop {
+			display: none !important;
 		}
 
-		.hero-col-left {
-			height: 50vh;
+		.hero-mobile {
+			display: flex !important;
+			flex-direction: column;
+			height: 100vh;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			background-color: var(--color-bg);
 		}
 
-		.hero-col-right {
-			height: auto;
-			padding: 4rem 2rem;
+		.mobile-top-bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr auto 1fr;
+			align-items: center;
+			padding: 1.5rem 1.2rem;
+			z-index: 102;
 		}
-		
-		.hero-logo-large {
-			max-width: 220px;
-			margin-bottom: 2rem;
+
+		/* Icono hamburguesa móvil */
+		.mobile-menu-toggle {
+			background: none;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			cursor: pointer;
+			padding: 5px;
+			width: 24px;
+			height: 20px;
+			justify-content: center;
+			justify-self: start;
+			z-index: 103;
+		}
+
+		.mobile-menu-toggle span {
+			display: block;
+			height: 2px;
+			background-color: #F2E8D5; /* Cream F2E8D5 */
+			transition: var(--transition-smooth);
+		}
+
+		.mobile-menu-toggle .line-1 {
+			width: 20px;
+		}
+
+		.mobile-menu-toggle .line-2 {
+			width: 14px;
+		}
+
+		/* Toggle activo (se vuelve cruz roja) */
+		.mobile-menu-toggle.active span {
+			background-color: #C41E1E;
+		}
+
+		.mobile-menu-toggle.active .line-1 {
+			transform: translateY(3.5px) rotate(45deg);
+			width: 20px;
+		}
+
+		.mobile-menu-toggle.active .line-2 {
+			transform: translateY(-3.5px) rotate(-45deg);
+			width: 20px;
+		}
+
+		/* Logo centrado móvil */
+		.mobile-logo-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.mobile-logo-img {
+			width: 100%;
+			max-width: 140px;
+			height: auto;
+			object-fit: contain;
+		}
+
+		/* Botón reservar derecho móvil */
+		.mobile-reserve-wrapper {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.mobile-reserve-btn {
+			text-decoration: none;
+			color: #F2E8D5; /* Cream F2E8D5 */
+			font-family: var(--font-sans);
+			font-size: 0.8rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			transition: color 0.3s ease;
+		}
+
+		.mobile-reserve-btn:hover {
+			color: #C41E1E;
+		}
+
+		/* Fondo móvil */
+		.mobile-hero-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-color: var(--color-bg);
+		}
+
+		.mobile-hero-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		/* Overlay sutil crema 10-15% */
+		.mobile-hero-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(242, 232, 213, 0.12); /* 12% opacity cream overlay */
+			z-index: 2;
+		}
+
+		/* Dropdown menú móvil */
+		.mobile-nav-menu {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background-color: #F2E8D5; /* Cream */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 2.5rem;
+			z-index: 101;
+			transform: translateY(-100%);
+			transition: var(--transition-smooth);
+			pointer-events: none;
+		}
+
+		.mobile-nav-menu.active {
+			transform: translateY(0);
+			pointer-events: auto;
+		}
+
+		.mobile-nav-link {
+			text-decoration: none;
+			color: #C41E1E; /* Red */
+			font-family: var(--font-serif);
+			font-size: 2.2rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			transition: transform 0.2s ease;
+		}
+
+		.mobile-nav-link:hover {
+			transform: scale(1.05);
 		}
 	}
 
