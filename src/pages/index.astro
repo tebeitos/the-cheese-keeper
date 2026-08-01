@@ -45,14 +45,9 @@ import { marca, producto } from '../data/producto';
 						<span class="line-2"></span>
 					</button>
 					
-					<!-- Centro: logo -->
+					<!-- Derecha: logo negro -->
 					<div class="mobile-logo-wrapper">
 						<img src="/logo.png" alt="The Cheese Keeper" class="mobile-logo-img" />
-					</div>
-					
-					<!-- Derecha: botón Reservar -->
-					<div class="mobile-reserve-wrapper">
-						<a href="#reservar" class="mobile-reserve-btn">Reservar</a>
 					</div>
 				</div>
 
@@ -503,10 +498,10 @@ import { marca, producto } from '../data/producto';
 			top: 0;
 			left: 0;
 			width: 100%;
-			display: grid;
-			grid-template-columns: 1fr auto 1fr;
+			display: flex;
+			justify-content: space-between;
 			align-items: center;
-			padding: 1.5rem 1.2rem;
+			padding: 2rem 2rem;
 			z-index: 102;
 		}
 
@@ -522,14 +517,13 @@ import { marca, producto } from '../data/producto';
 			width: 24px;
 			height: 20px;
 			justify-content: center;
-			justify-self: start;
 			z-index: 103;
 		}
 
 		.mobile-menu-toggle span {
 			display: block;
 			height: 2px;
-			background-color: #F2E8D5; /* Cream F2E8D5 */
+			background-color: #2B231F; /* Deep charcoal matching the logo negro */
 			transition: var(--transition-smooth);
 		}
 
@@ -556,10 +550,10 @@ import { marca, producto } from '../data/producto';
 			width: 20px;
 		}
 
-		/* Logo centrado móvil */
+		/* Logo móvil alineado a la derecha */
 		.mobile-logo-wrapper {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-end;
 			align-items: center;
 		}
 
@@ -568,27 +562,6 @@ import { marca, producto } from '../data/producto';
 			max-width: 140px;
 			height: auto;
 			object-fit: contain;
-		}
-
-		/* Botón reservar derecho móvil */
-		.mobile-reserve-wrapper {
-			display: flex;
-			justify-content: flex-end;
-		}
-
-		.mobile-reserve-btn {
-			text-decoration: none;
-			color: #F2E8D5; /* Cream F2E8D5 */
-			font-family: var(--font-sans);
-			font-size: 0.8rem;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.15em;
-			transition: color 0.3s ease;
-		}
-
-		.mobile-reserve-btn:hover {
-			color: #C41E1E;
 		}
 
 		/* Fondo móvil */
