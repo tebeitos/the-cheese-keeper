@@ -69,22 +69,22 @@ import { marca, producto } from '../data/producto';
 			</section>
 
 			<!-- 3. La Historia -->
-			<section id="historia" class="history-section">
-				<div class="section-container grid-two-cols">
-					<div class="history-text-panel">
-						<span class="section-tag">Nuestros Orígenes</span>
-						<h2 class="section-title">La Historia</h2>
-						<div class="story-content">
-							<p>Hace sesenta años, alguien compró una quesera. No era un capricho — era el objeto adecuado en la cocina adecuada, haciendo su trabajo en silencio, año tras año.</p>
-							<p>Cuando nuestra socia era pequeña, se quedaba mirando la de su abuela. No porque fuera valiosa. Sino porque era perfecta. El rojo, el peso, la manera en que presidía la mesa cuando llegaban visitas. Siempre supo que algún día quería heredarla.</p>
-							<p>Esa quesera sigue aquí, en nuestra tienda de Gijón. Con sus años encima, intacta.</p>
-							<p class="story-highlight">The Cheese Keeper nació de esa quesera. Y de la convicción de que hay objetos que merecen durar otros sesenta años.</p>
-						</div>
-					</div>
-					<div class="history-image-panel">
-						<div class="image-frame">
-							<img src="/fromage.jpg" alt="Selección de quesos artesanos sobre tabla rústica de madera" class="history-image" />
-						</div>
+			<section id="historia" class="story">
+				<div class="section-container">
+					<div class="story-inner">
+						<blockquote>En 1960, mi abuelo no tenía wifi.<br>Pero sí sabía cómo guardar un buen queso.</blockquote>
+
+						<p>No tenía notificaciones, ni entregas en 24 horas, ni doce quesos distintos esperando turno en la nevera.</p>
+
+						<p>Tenía uno. Bien elegido, bien guardado. Leonés. De oveja. Y una campana metálica roja brillante que lo protegía del aire y del tiempo hasta que llegaba el momento de compartirlo.</p>
+
+						<p>Esa quesera existió de verdad. Era de mi abuelo. Y seguía guardando queso, sin una sola grieta, sesenta años después. Una de mis herencias más preciadas.</p>
+
+						<p>The Cheese Keeper nace de esa quesera. No como una copia, sino como un homenaje a lo que representaba: objetos que no se sustituyen.</p>
+
+						<p>Hoy todo va más rápido. Por eso, precisamente, hay sitio para algo que vaya despacio. Rituales sin prisas.</p>
+
+						<p class="story-close">Ahora tú también puedes guardar un buen queso como se guardaba entonces. Con estilo.<br><strong>The Cheese Keeper</strong></p>
 					</div>
 				</div>
 			</section>
@@ -644,60 +644,40 @@ import { marca, producto } from '../data/producto';
 	}
 
 	/* --- 3. HISTORIA --- */
-	.history-section {
+	.story {
 		background-color: var(--color-bg);
 	}
 
-	.history-text-panel {
-		padding-right: 2rem;
+	.story-inner {
+		max-width: 620px;
+		margin: 0 auto;
+		text-align: left;
 	}
 
-	@media (max-width: 968px) {
-		.history-text-panel {
-			padding-right: 0;
-		}
-	}
-
-	.story-content p {
+	.story p {
 		margin-bottom: 1.5rem;
 		font-size: 1.05rem;
 		color: var(--color-text-light);
 		line-height: 1.7;
 	}
 
-	.story-highlight {
+	.story blockquote {
 		font-family: var(--font-serif);
-		font-size: 1.35rem;
-		color: var(--color-text) !important;
+		font-size: 1.6rem;
 		font-style: italic;
-		border-left: 3px solid var(--color-primary);
-		padding-left: 1.5rem;
-		margin-top: 2rem;
+		font-weight: 500;
+		color: var(--color-primary);
+		text-align: center;
+		margin-bottom: 2.5rem;
+		line-height: 1.4;
 	}
 
-	.history-image-panel {
-		display: flex;
-		justify-content: center;
-	}
-
-	.image-frame {
-		position: relative;
-		border-radius: 16px;
-		overflow: hidden;
-		box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-		aspect-ratio: 4 / 3;
-		width: 100%;
-	}
-
-	.history-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: var(--transition-smooth);
-	}
-
-	.image-frame:hover .history-image {
-		transform: scale(1.03);
+	.story-close {
+		text-align: center;
+		margin-top: 28px;
+		font-size: 1.1rem;
+		color: var(--color-text);
+		line-height: 1.6;
 	}
 
 	/* --- 4. EL PRODUCTO --- */
