@@ -20,40 +20,18 @@ import { marca, producto } from '../data/producto';
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<!-- 1. Header -->
-		<header class="header">
-			<div class="header-container">
-				<a href="#" class="logo-area">
-					<img src="/logo.png" alt="The Cheese Keeper logo icon" class="logo-icon" />
-					<span class="logo-text">The Cheese Keeper</span>
-				</a>
-				<nav class="nav-menu">
-					<a href="#historia" class="nav-link">Historia</a>
-					<a href="#producto" class="nav-link">El Producto</a>
-					<a href="#colores" class="nav-link">Colores</a>
-					<a href="#reservar" class="nav-link nav-btn">Reservar</a>
-				</nav>
-				<button class="mobile-menu-toggle" aria-label="Abrir menú" id="menuToggle">
-					<span></span>
-					<span></span>
-				</button>
-			</div>
-		</header>
-
 		<main>
 			<!-- 2. Hero Section -->
 			<section class="hero-section">
-				<div class="hero-image-wrapper">
-					<img src="/hero.png" alt="Bodegón de The Cheese Keeper, campana de aluminio esmaltado rojo y tabla de madera de mango con quesos artesanos" class="hero-image" />
-					<div class="hero-overlay"></div>
+				<div class="hero-col-left">
+					<img src="/quesera-home.jpeg" alt="Quesera artesanal The Cheese Keeper sobre la mesa" class="hero-img-full" />
 				</div>
-				<div class="hero-content">
-					<span class="hero-subtitle">{marca.nombre}</span>
-					<h1 class="hero-title">
-						Tu abuelo no tenía WiFi. <br />
-						<span class="italic-title">Pero sabía guardar un buen queso.</span>
-					</h1>
-					<a href="#reservar" class="hero-btn">Quiero reservar el mío</a>
+				<div class="hero-col-right">
+					<img src="/logo.png" alt="The Cheese Keeper Logo" class="hero-logo-large" />
+					<div class="hero-menu">
+						<a href="#historia" class="hero-menu-link">Historia</a>
+						<a href="#reservar" class="hero-menu-link">Reservar</a>
+					</div>
 				</div>
 			</section>
 
@@ -243,27 +221,6 @@ import { marca, producto } from '../data/producto';
 				</div>
 			</div>
 		</footer>
-
-		<!-- Mobile Menu Script -->
-		<script>
-			const menuToggle = document.getElementById('menuToggle');
-			const navMenu = document.querySelector('.nav-menu');
-			
-			if (menuToggle && navMenu) {
-				menuToggle.addEventListener('click', () => {
-					menuToggle.classList.toggle('active');
-					navMenu.classList.toggle('active');
-				});
-				
-				// Cierra el menú móvil al hacer click en un enlace
-				document.querySelectorAll('.nav-link').forEach(link => {
-					link.addEventListener('click', () => {
-						menuToggle.classList.remove('active');
-						navMenu.classList.remove('active');
-					});
-				});
-			}
-		</script>
 	</body>
 </html>
 
@@ -271,8 +228,8 @@ import { marca, producto } from '../data/producto';
 	/* --- DESIGN SYSTEM & PREMIUM CUSTOM STYLES --- */
 	:root {
 		/* Paleta de colores */
-		--color-bg: #FDFBF7;           /* Warm soft off-white */
-		--color-bg-alt: #F4EFE6;       /* Slightly deeper warm beige */
+		--color-bg: #F2E8D5;           /* Cream matching the logo background */
+		--color-bg-alt: #F2E8D5;       /* Same cream background for all sections */
 		--color-text: #2B231F;         /* Deep charcoal brown */
 		--color-text-light: #6A5B53;   /* Muted brownish gray */
 		--color-primary: #A92523;      /* Deep rich logo red */
@@ -388,245 +345,102 @@ import { marca, producto } from '../data/producto';
 		}
 	}
 
-	/* --- 1. HEADER --- */
-	.header {
-		position: sticky;
-		top: 0;
-		background-color: rgba(253, 251, 247, 0.85);
-		backdrop-filter: blur(12px);
-		z-index: 1000;
-		border-bottom: 1px solid var(--color-border);
-		transition: var(--transition-smooth);
-	}
-
-	.header-container {
-		max-width: var(--container-width);
-		margin: 0 auto;
-		padding: 1.2rem 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.logo-area {
-		display: flex;
-		align-items: center;
-		gap: 0.8rem;
-		text-decoration: none;
-		color: var(--color-text);
-		transition: transform 0.2s ease;
-	}
-
-	.logo-area:hover {
-		transform: translateY(-1px);
-	}
-
-	.logo-icon {
-		width: 32px;
-		height: 32px;
-		object-fit: contain;
-	}
-
-	.logo-text {
-		font-family: var(--font-script);
-		font-size: 1.85rem;
-		font-weight: 700;
-		line-height: 1;
-		color: var(--color-primary);
-		padding-top: 0.25rem;
-	}
-
-	.nav-menu {
-		display: flex;
-		align-items: center;
-		gap: 2.5rem;
-	}
-
-	.nav-link {
-		text-decoration: none;
-		color: var(--color-text-light);
-		font-size: 0.95rem;
-		font-weight: 500;
-		transition: color 0.25s ease;
-	}
-
-	.nav-link:hover {
-		color: var(--color-primary);
-	}
-
-	.nav-btn {
-		background-color: var(--color-primary);
-		color: #FFFFFF;
-		padding: 0.6rem 1.4rem;
-		border-radius: 99px;
-		font-weight: 600;
-		transition: var(--transition-smooth);
-	}
-
-	.nav-btn:hover {
-		background-color: var(--color-primary-hover);
-		color: #FFFFFF;
-		box-shadow: 0 4px 12px rgba(169, 37, 35, 0.15);
-		transform: translateY(-1px);
-	}
-
-	/* Menú Móvil */
-	.mobile-menu-toggle {
-		display: none;
-		background: none;
-		border: none;
-		flex-direction: column;
-		gap: 6px;
-		cursor: pointer;
-		padding: 5px;
-	}
-
-	.mobile-menu-toggle span {
-		display: block;
-		width: 24px;
-		height: 2px;
-		background-color: var(--color-text);
-		transition: var(--transition-smooth);
-	}
-
-	@media (max-width: 768px) {
-		.mobile-menu-toggle {
-			display: flex;
-		}
-
-		.nav-menu {
-			position: fixed;
-			top: 66px;
-			left: 0;
-			width: 100%;
-			background-color: var(--color-bg);
-			flex-direction: column;
-			padding: 2.5rem;
-			gap: 2rem;
-			border-bottom: 1px solid var(--color-border);
-			transform: translateY(-120%);
-			transition: var(--transition-smooth);
-			z-index: 999;
-			opacity: 0;
-			pointer-events: none;
-		}
-
-		.nav-menu.active {
-			transform: translateY(0);
-			opacity: 1;
-			pointer-events: auto;
-		}
-
-		.mobile-menu-toggle.active span:nth-child(1) {
-			transform: translateY(4px) rotate(45deg);
-		}
-
-		.mobile-menu-toggle.active span:nth-child(2) {
-			transform: translateY(-4px) rotate(-45deg);
-		}
-	}
-
-	/* --- 2. HERO --- */
+	/* --- 1. HERO Y NAVEGACIÓN --- */
 	.hero-section {
-		position: relative;
-		height: 85vh;
-		min-height: 550px;
-		max-height: 750px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #FFFFFF;
-		text-align: center;
+		display: grid;
+		grid-template-columns: 0.6fr 0.4fr;
+		height: 100vh;
+		min-height: 600px;
+		background-color: var(--color-bg);
 		overflow: hidden;
 	}
 
-	.hero-image-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.hero-col-left {
 		width: 100%;
 		height: 100%;
-		z-index: 1;
+		background-color: var(--color-bg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
 	}
 
-	.hero-image {
+	.hero-img-full {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
-		transform: scale(1.03);
-		animation: subtleZoom 20s infinite alternate ease-in-out;
 	}
 
-	@keyframes subtleZoom {
-		0% { transform: scale(1); }
-		100% { transform: scale(1.06); }
-	}
-
-	.hero-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.hero-col-right {
 		width: 100%;
 		height: 100%;
-		background: radial-gradient(circle, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%);
-		z-index: 2;
+		background-color: var(--color-bg);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 3rem;
 	}
 
-	.hero-content {
-		position: relative;
-		z-index: 3;
-		max-width: 800px;
-		padding: 0 2rem;
-	}
-
-	.hero-subtitle {
-		font-family: var(--font-script);
-		font-size: 2.8rem;
-		color: #FFFFFF;
-		display: block;
-		margin-bottom: 1rem;
-		text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	}
-
-	.hero-title {
-		font-size: 4rem;
-		line-height: 1.15;
+	.hero-logo-large {
+		width: 100%;
+		max-width: 280px;
+		height: auto;
+		object-fit: contain;
 		margin-bottom: 2.5rem;
-		font-weight: 600;
-		letter-spacing: -0.02em;
-		text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+	}
+
+	.hero-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 220px;
+		gap: 1.2rem;
+	}
+
+	.hero-menu-link {
+		font-family: var(--font-serif);
+		font-size: 1.1rem;
+		font-weight: 500;
+		color: var(--color-text);
+		text-decoration: none;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		padding-bottom: 0.6rem;
+		border-bottom: 1px solid #C41E1E; /* Thin red line */
+		transition: all 0.3s ease;
+	}
+
+	.hero-menu-link:hover {
+		color: #C41E1E;
+		border-bottom-color: var(--color-text);
+		letter-spacing: 0.18em;
 	}
 
 	@media (max-width: 768px) {
 		.hero-section {
-			height: 75vh;
+			grid-template-columns: 1fr;
+			height: auto;
+			min-height: auto;
 		}
-		.hero-title {
-			font-size: 2.6rem;
-		}
-		.hero-subtitle {
-			font-size: 2.2rem;
-		}
-	}
 
-	.hero-btn {
-		display: inline-block;
-		background-color: var(--color-primary);
-		color: #FFFFFF;
-		text-decoration: none;
-		padding: 1rem 2.2rem;
-		border-radius: 99px;
-		font-weight: 600;
-		font-size: 1.05rem;
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-		transition: var(--transition-smooth);
-	}
+		.hero-col-left {
+			height: 50vh;
+		}
 
-	.hero-btn:hover {
-		background-color: var(--color-primary-hover);
-		transform: translateY(-2px);
-		box-shadow: 0 15px 30px rgba(169, 37, 35, 0.3);
+		.hero-col-right {
+			height: auto;
+			padding: 4rem 2rem;
+		}
+		
+		.hero-logo-large {
+			max-width: 220px;
+			margin-bottom: 2rem;
+		}
 	}
 
 	/* --- 3. HISTORIA --- */
