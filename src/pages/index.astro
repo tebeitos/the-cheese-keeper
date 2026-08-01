@@ -501,7 +501,7 @@ import { marca, producto } from '../data/producto';
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 2rem 2rem;
+			padding: 2rem 1.5rem;
 			z-index: 102;
 		}
 
@@ -523,7 +523,7 @@ import { marca, producto } from '../data/producto';
 		.mobile-menu-toggle span {
 			display: block;
 			height: 2px;
-			background-color: #F2E8D5; /* Cream F2E8D5 */
+			background-color: #C41E1E; /* Red matching the logo */
 			transition: var(--transition-smooth);
 		}
 
@@ -555,11 +555,12 @@ import { marca, producto } from '../data/producto';
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
+			margin-right: -0.5rem; /* Nudge it slightly further right */
 		}
 
 		.mobile-logo-img {
 			width: 100%;
-			max-width: 140px;
+			max-width: 105px; /* Reduced size */
 			height: auto;
 			object-fit: contain;
 		}
