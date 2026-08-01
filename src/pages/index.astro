@@ -126,12 +126,6 @@ import { marca, producto } from '../data/producto';
 							<p>Construída de manera artesanal con materias primas sostenibles.</p>
 						</div>
 					</div>
-					<div class="product-philosophy-box">
-						<p class="product-description-text">
-							Campana de aluminio esmaltado en rojo brillante. Tabla de madera de mango con acabado en cera natural. Un cuchillo construido para durar. Tres objetos que pertenecen juntos — porque servir queso merece algo más que un plato y un cuchillo cualquiera.
-						</p>
-						<p class="product-conclusion">No es menaje de cocina. Es el principio de un hábito.</p>
-					</div>
 				</div>
 			</section>
 
@@ -143,6 +137,16 @@ import { marca, producto } from '../data/producto';
 					<div class="complements-intro">
 						<p>Un buen queso de pasta blanda se corta con un buen cuchillo de pasta blanda. Hoja fina de acero inoxidable, pensada específicamente para un Brie, un Camembert, una torta del casar que necesita abrirse por arriba o cualquier queso cremoso que necesite un trabajo fino y poca resistencia de la hoja. Mango de madera de mango, elaborado a mano en India — cada pieza con su propio veteado, ninguna exactamente igual a otra.</p>
 						<p>Y además de todo esto, muy fotografiable.</p>
+					</div>
+
+					<div class="complements-subgroup">
+						<span class="section-tag">La tabla</span>
+						<h3 class="section-title">Una tabla de madera no es solo donde apoyas el queso.<br><span class="italic-title">Es donde empieza el festín.</span></h3>
+						<div class="complements-intro">
+							<p>Madera maciza de mango, la misma que acompaña a la quesera y al cuchillo, para que las tres piezas se reconozcan como lo que son: una sola familia. Alargada, con espacio de sobra para presentar una tabla de quesos.</p>
+							<p>Cada tabla tiene su propio veteado, sus propias vetas, su propio carácter. Ninguna sale exactamente igual de la anterior.</p>
+							<p>No la vas a guardar en un cajón. Se queda fuera, sobre la encimera, esperando la próxima vez que alguien se siente a la mesa contigo.</p>
+						</div>
 					</div>
 					
 					<div class="color-blocks">
@@ -804,7 +808,13 @@ import { marca, producto } from '../data/producto';
 
 	.complements-intro {
 		max-width: 760px;
-		margin-bottom: 3.5rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.complements-subgroup {
+		margin-top: 3.5rem;
+		padding-top: 2.5rem;
+		border-top: 1px solid var(--color-border);
 	}
 
 	.complements-intro p {
