@@ -491,7 +491,8 @@ import { marca, producto } from '../data/producto';
 		.hero-mobile {
 			display: flex !important;
 			flex-direction: column;
-			height: 100vh;
+			height: 60vh; /* Reduced from 100vh to avoid extreme zoom on mobile */
+			min-height: 420px;
 			width: 100%;
 			position: relative;
 			overflow: hidden;
@@ -522,7 +523,7 @@ import { marca, producto } from '../data/producto';
 			width: 24px;
 			height: 20px;
 			justify-content: center;
-			z-index: 103;
+			z-index: 1001; /* High z-index to stay above fixed menu */
 		}
 
 		.mobile-menu-toggle span {
@@ -585,7 +586,7 @@ import { marca, producto } from '../data/producto';
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			object-position: 25% center;
+			object-position: 25% 30%; /* Shifted horizontally and vertically to focus the dome with less zoom */
 		}
 
 		/* Overlay sutil crema 10-15% */
@@ -601,7 +602,7 @@ import { marca, producto } from '../data/producto';
 
 		/* Dropdown menú móvil */
 		.mobile-nav-menu {
-			position: absolute;
+			position: fixed; /* Fixed position to overlay entire viewport */
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -612,7 +613,7 @@ import { marca, producto } from '../data/producto';
 			align-items: center;
 			justify-content: center;
 			gap: 1.8rem;
-			z-index: 101;
+			z-index: 1000; /* Behind active toggle button, above everything else */
 			transform: translateY(-100%);
 			transition: var(--transition-smooth);
 			pointer-events: none;
