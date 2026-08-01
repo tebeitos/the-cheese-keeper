@@ -1,0 +1,332 @@
+---
+import { marca } from '../data/producto';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/logo.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>Política de Privacidad — The Cheese Keeper</title>
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="header-container">
+				<a href="/" class="logo-area">
+					<img src="/logo.png" alt="The Cheese Keeper logo icon" class="logo-icon" />
+					<span class="logo-text">The Cheese Keeper</span>
+				</a>
+				<nav class="nav-menu">
+					<a href="/#historia" class="nav-link">Historia</a>
+					<a href="/#producto" class="nav-link">El Producto</a>
+					<a href="/#colores" class="nav-link">Colores</a>
+					<a href="/#reservar" class="nav-link nav-btn">Reservar</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="legal-main">
+			<div class="legal-container">
+				<h1 class="legal-title">Política de Privacidad</h1>
+				<p class="legal-date">Última actualización: 1 de agosto de 2026</p>
+				
+				<div class="legal-content">
+					<h2>1. Responsable del Tratamiento</h2>
+					<p>El responsable del tratamiento de los datos recogidos a través de esta web es La Quesería Gijón S.L., con correo electrónico de contacto <a href={`mailto:${marca.email}`}>{marca.email}</a>.</p>
+
+					<h2>2. Datos Recogidos y Finalidad</h2>
+					<p>Al registrarte en nuestro formulario de reserva/lista de espera, recopilamos:</p>
+					<ul>
+						<li><strong>Nombre:</strong> Para dirigirnos a ti personalmente en las comunicaciones.</li>
+						<li><strong>Email:</strong> Para enviarte notificaciones exclusivamente relacionadas con el lanzamiento del producto <strong>The Cheese Keeper</strong>.</li>
+					</ul>
+					<p>La base legal para el tratamiento de estos datos es tu <strong>consentimiento expreso</strong> al enviar el formulario.</p>
+
+					<h2>3. Conservación de los Datos</h2>
+					<p>Los datos se conservarán únicamente durante el tiempo necesario para cumplir con la finalidad para la que se recabaron (notificar el lanzamiento) o hasta que solicites su supresión.</p>
+
+					<h2>4. Destinatarios</h2>
+					<p>Tus datos no serán cedidos a terceros, salvo obligación legal. Para el envío del formulario, utilizamos la plataforma <strong>Formspree</strong> como encargado del tratamiento, cumpliendo con los estándares de seguridad exigidos por el RGPD.</p>
+
+					<h2>5. Tus Derechos</h2>
+					<p>Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, limitación del tratamiento y portabilidad enviando un correo electrónico a <a href={`mailto:${marca.email}`}>{marca.email}</a>, adjuntando una copia de tu documento de identidad o equivalente para verificar tu identidad.</p>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-brand-info">
+					<a href="/" class="logo-area">
+						<img src="/logo.png" alt="The Cheese Keeper logo icon" class="logo-icon-footer" />
+						<span class="logo-text">The Cheese Keeper</span>
+					</a>
+					<p class="footer-tagline">Para los que se toman el queso en serio.</p>
+				</div>
+				<div class="footer-links-group">
+					<nav class="footer-nav">
+						<a href="/aviso-legal" class="footer-link">Aviso Legal</a>
+						<a href="/privacidad" class="footer-link">Privacidad</a>
+					</nav>
+					<p class="copyright">&copy; 2026 La Quesería Gijón. Todos los derechos reservados.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	:root {
+		--color-bg: #FDFBF7;
+		--color-bg-alt: #F4EFE6;
+		--color-text: #2B231F;
+		--color-text-light: #6A5B53;
+		--color-primary: #A92523;
+		--color-primary-hover: #8D1D1C;
+		--color-border: rgba(43, 35, 31, 0.08);
+		
+		--font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+		--font-serif: 'Playfair Display', Georgia, serif;
+		--font-script: 'Dancing Script', cursive;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		background-color: var(--color-bg);
+		color: var(--color-text);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		line-height: 1.6;
+	}
+
+	/* Header */
+	.header {
+		position: sticky;
+		top: 0;
+		background-color: rgba(253, 251, 247, 0.85);
+		backdrop-filter: blur(12px);
+		z-index: 1000;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.header-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1.2rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo-area {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		text-decoration: none;
+		color: var(--text);
+	}
+
+	.logo-icon {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+	}
+
+	.logo-text {
+		font-family: var(--font-script);
+		font-size: 1.85rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		padding-top: 0.25rem;
+	}
+
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
+	}
+
+	.nav-link {
+		text-decoration: none;
+		color: var(--color-text-light);
+		font-size: 0.95rem;
+		font-weight: 500;
+		transition: color 0.25s ease;
+	}
+
+	.nav-link:hover {
+		color: var(--color-primary);
+	}
+
+	.nav-btn {
+		background-color: var(--color-primary);
+		color: #FFFFFF;
+		padding: 0.6rem 1.4rem;
+		border-radius: 99px;
+		font-weight: 600;
+	}
+
+	/* Main */
+	.legal-main {
+		flex: 1;
+		padding: 5rem 2rem;
+	}
+
+	.legal-container {
+		max-width: 760px;
+		margin: 0 auto;
+	}
+
+	.legal-title {
+		font-size: 3rem;
+		font-family: var(--font-serif);
+		margin-bottom: 0.5rem;
+		letter-spacing: -0.02em;
+	}
+
+	.legal-date {
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+		margin-bottom: 3rem;
+	}
+
+	.legal-content h2 {
+		font-family: var(--font-serif);
+		font-size: 1.6rem;
+		margin: 2.5rem 0 1rem;
+		letter-spacing: -0.01em;
+	}
+
+	.legal-content p {
+		margin-bottom: 1.2rem;
+		color: var(--color-text-light);
+	}
+
+	.legal-content ul {
+		margin-bottom: 1.5rem;
+		padding-left: 1.5rem;
+		color: var(--color-text-light);
+	}
+
+	.legal-content li {
+		margin-bottom: 0.5rem;
+	}
+
+	.legal-content a {
+		color: var(--color-primary);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.legal-content a:hover {
+		text-decoration: underline;
+	}
+
+	/* Footer */
+	.footer {
+		background-color: #1E1815;
+		color: #E2DBD6;
+		padding: 4rem 2rem;
+		border-top: 1px solid rgba(255,255,255,0.05);
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 3rem;
+	}
+
+	.footer-brand-info {
+		max-width: 320px;
+	}
+
+	.footer-brand-info .logo-area {
+		margin-bottom: 1rem;
+	}
+
+	.logo-icon-footer {
+		width: 28px;
+		height: 28px;
+		object-fit: contain;
+		filter: brightness(0) invert(1) sepia(1) saturate(1) hue-rotate(320deg);
+	}
+
+	.footer-brand-info .logo-text {
+		color: #E2DBD6;
+	}
+
+	.footer-tagline {
+		font-size: 0.9rem;
+		color: #A6978E;
+	}
+
+	.footer-links-group {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 1.5rem;
+	}
+
+	.footer-nav {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.footer-link {
+		color: #A6978E;
+		text-decoration: none;
+		font-size: 0.9rem;
+	}
+
+	.footer-link:hover {
+		color: #E2DBD6;
+		text-decoration: underline;
+	}
+
+	.copyright {
+		font-size: 0.8rem;
+		color: #8C7D75;
+	}
+
+	@media (max-width: 768px) {
+		.footer-container {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.footer-brand-info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.footer-links-group {
+			align-items: center;
+		}
+	}
+</style>
