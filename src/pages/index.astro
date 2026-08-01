@@ -55,7 +55,7 @@ import { marca, producto } from '../data/producto';
 
 				<!-- Fondo y overlay -->
 				<div class="mobile-hero-bg">
-					<img src="/quesera-home.png" alt="Quesera artesanal" class="mobile-hero-img" />
+					<img src="/quesera-home-movil.jpeg" alt="Quesera artesanal" class="mobile-hero-img" />
 					<div class="mobile-hero-overlay"></div>
 				</div>
 				
@@ -72,9 +72,10 @@ import { marca, producto } from '../data/producto';
 			<section id="historia" class="story">
 				<div class="section-container">
 					<div class="story-inner">
-						<blockquote>En 1960, mi abuelo no tenía wifi.<br>Pero sí sabía cómo guardar un buen queso.</blockquote>
+						<span class="section-tag">La Historia</span>
+						<h2 class="section-title">En 1960, tu abuelo no tenía wifi.</h2>
 
-						<p>No tenía notificaciones, ni entregas en 24 horas, ni doce quesos distintos esperando turno en la nevera.</p>
+						<p>Pero sabía cómo guardar un buen queso. No tenía notificaciones, ni entregas en 24 horas, ni doce quesos distintos esperando turno en la nevera.</p>
 
 						<p>Tenía uno. Bien elegido, bien guardado. Leonés. De oveja. Y una campana metálica roja brillante que lo protegía del aire y del tiempo hasta que llegaba el momento de compartirlo.</p>
 
@@ -491,7 +492,7 @@ import { marca, producto } from '../data/producto';
 		.hero-mobile {
 			display: flex !important;
 			flex-direction: column;
-			height: 100vh;
+			height: 85vh;
 			width: 100%;
 			position: relative;
 			overflow: hidden;
@@ -585,7 +586,7 @@ import { marca, producto } from '../data/producto';
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			object-position: 25% 30%; /* Shifted horizontally and vertically to focus the dome with less zoom */
+			object-position: center;
 		}
 
 		/* Overlay sutil crema 10-15% */
