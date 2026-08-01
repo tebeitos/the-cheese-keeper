@@ -18,24 +18,9 @@ import { marca } from '../data/producto';
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<!-- Header -->
-		<header class="header">
-			<div class="header-container">
-				<a href="/" class="logo-area">
-					<img src="/logo.png" alt="The Cheese Keeper logo icon" class="logo-icon" />
-					<span class="logo-text">The Cheese Keeper</span>
-				</a>
-				<nav class="nav-menu">
-					<a href="/#historia" class="nav-link">Historia</a>
-					<a href="/#producto" class="nav-link">El Producto</a>
-					<a href="/#colores" class="nav-link">Colores</a>
-					<a href="/#reservar" class="nav-link nav-btn">Reservar</a>
-				</nav>
-			</div>
-		</header>
-
 		<main class="legal-main">
 			<div class="legal-container">
+				<a href="/" class="back-link">&larr; Volver al inicio</a>
 				<h1 class="legal-title">Aviso Legal</h1>
 				<p class="legal-date">Última actualización: 1 de agosto de 2026</p>
 				
@@ -186,12 +171,27 @@ import { marca } from '../data/producto';
 	/* Main */
 	.legal-main {
 		flex: 1;
-		padding: 5rem 2rem;
+		padding: 2.5rem 2rem 5rem;
 	}
 
 	.legal-container {
 		max-width: 760px;
 		margin: 0 auto;
+	}
+
+	.back-link {
+		display: inline-block;
+		margin-bottom: 2rem;
+		color: var(--color-primary);
+		text-decoration: none;
+		font-size: 0.95rem;
+		font-weight: 600;
+		transition: transform 0.2s ease;
+	}
+
+	.back-link:hover {
+		text-decoration: underline;
+		transform: translateX(-3px);
 	}
 
 	.legal-title {
