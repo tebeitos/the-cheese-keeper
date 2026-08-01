@@ -239,6 +239,10 @@ import { marca, producto } from '../data/producto';
 									<input type="email" id="email" name="email" required placeholder="Tu email" class="form-input" />
 								</div>
 							</div>
+							<label class="privacy-check">
+								<input type="checkbox" name="consentimiento" required />
+								He leído y acepto la <a href="/privacidad" target="_blank">Política de Privacidad</a>.
+							</label>
 							<button type="submit" class="submit-btn">Avisadme cuando esté listo</button>
 							<p class="legal-note center">Sin spam. Solo el email que de verdad querrás recibir.</p>
 						</form>
@@ -1072,10 +1076,32 @@ import { marca, producto } from '../data/producto';
 		transition: var(--transition-smooth);
 	}
 
-	.form-input:focus {
-		outline: none;
-		border-color: #D42B2B;
-		box-shadow: 0 0 0 3px rgba(212, 43, 43, 0.15);
+	.privacy-check {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		font-size: 0.88rem;
+		color: var(--color-text-light);
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.privacy-check input[type="checkbox"] {
+		width: 17px;
+		height: 17px;
+		accent-color: #D42B2B;
+		cursor: pointer;
+	}
+
+	.privacy-check a {
+		color: #D42B2B;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.privacy-check a:hover {
+		color: #b02121;
 	}
 
 	.submit-btn {
