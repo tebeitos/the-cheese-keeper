@@ -138,9 +138,12 @@ import { marca, producto } from '../data/producto';
 			<!-- 5. Los complementos -->
 			<section id="complementos" class="colors-section">
 				<div class="section-container">
-					<span class="section-tag center">El Set Completo</span>
-					<h2 class="section-title center">Los complementos<br><span class="italic-title">Los colores y acabados.</span></h2>
-					<p class="colors-intro center">Hemos pensado que una quesera que va a vivir décadas en tu cocina debería poder elegir el color que le va contigo. Blanco porcelana, verde botella, y más colores en camino — la colección crece despacio, porque las cosas buenas no tienen prisa.</p>
+					<span class="section-tag">Los complementos</span>
+					<h2 class="section-title">El cuchillo de pasta blanda.</h2>
+					<div class="complements-intro">
+						<p>Un buen queso de pasta blanda se corta con un buen cuchillo de pasta blanda. Hoja fina de acero inoxidable, pensada específicamente para un Brie, un Camembert, una torta del casar que necesita abrirse por arriba o cualquier queso cremoso que necesite un trabajo fino y poca resistencia de la hoja. Mango de madera de mango, elaborado a mano en India — cada pieza con su propio veteado, ninguna exactamente igual a otra.</p>
+						<p>Y además de todo esto, muy fotografiable.</p>
+					</div>
 					
 					<div class="color-blocks">
 						<!-- Rojo Original -->
@@ -795,11 +798,17 @@ import { marca, producto } from '../data/producto';
 		background-color: var(--color-bg);
 	}
 
-	.colors-intro {
-		max-width: 700px;
-		margin: -0.5rem auto 4rem;
+	.complements-intro {
+		max-width: 760px;
+		margin-bottom: 3.5rem;
+	}
+
+	.complements-intro p {
 		font-size: 1.05rem;
 		color: var(--color-text-light);
+		line-height: 1.7;
+		margin-bottom: 1.25rem;
+		text-align: left;
 	}
 
 	.color-blocks {
