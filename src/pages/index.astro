@@ -103,6 +103,15 @@ import { marca, producto } from '../data/producto';
 				<div class="section-container narrow-container">
 					<span class="section-tag">La Quesera</span>
 					<h2 class="section-title">El alma de la mesa.</h2>
+					
+					<!-- Vídeo demostración del producto -->
+					<div class="product-video-wrapper">
+						<video class="product-video" autoplay loop muted playsinline poster="/quesera-home.png">
+							<source src="/quesera-demo.mp4" type="video/mp4" />
+							Tu navegador no soporta la reproducción de vídeo HTML5.
+						</video>
+					</div>
+
 					<div class="product-features">
 						<div class="feature-card">
 							<div class="feature-icon-wrapper">
@@ -713,11 +722,33 @@ import { marca, producto } from '../data/producto';
 		position: relative;
 	}
 
+	#quesera .section-container {
+		padding-top: 3rem;
+	}
+
+	.product-video-wrapper {
+		margin: 2rem 0 3rem;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+		border: 1px solid var(--color-border);
+		background-color: var(--color-bg);
+		aspect-ratio: 16 / 9;
+		width: 100%;
+	}
+
+	.product-video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
 	.product-features {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2.5rem;
-		margin: 4rem 0 3.5rem;
+		margin: 2.5rem 0 1.5rem;
 	}
 
 	@media (max-width: 768px) {
