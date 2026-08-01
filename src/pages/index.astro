@@ -611,7 +611,7 @@ import { marca, producto } from '../data/producto';
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			gap: 2.5rem;
+			gap: 1.8rem;
 			z-index: 101;
 			transform: translateY(-100%);
 			transition: var(--transition-smooth);
@@ -627,11 +627,15 @@ import { marca, producto } from '../data/producto';
 			text-decoration: none;
 			color: #C41E1E; /* Red */
 			font-family: var(--font-serif);
-			font-size: 2.2rem;
+			font-size: 1.5rem; /* Reduced from 2.2rem */
 			font-weight: 700;
 			text-transform: uppercase;
-			letter-spacing: 0.05em;
+			letter-spacing: 0.1em;
 			transition: transform 0.2s ease;
+			text-align: center;
+			width: 100%;
+			display: block;
+			padding: 0.5rem 0;
 		}
 
 		.mobile-nav-link:hover {
