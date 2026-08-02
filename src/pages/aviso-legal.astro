@@ -18,6 +18,14 @@ import { marca } from '../data/producto';
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<header class="site-header">
+			<div class="header-container">
+				<a href="/" class="header-logo-link">
+					<img src="/logo.png" alt="The Cheese Keeper" class="header-logo-img" />
+				</a>
+			</div>
+		</header>
+
 		<main class="legal-main">
 			<div class="legal-container">
 				<a href="/" class="back-link">&larr; Volver al inicio</a>
@@ -102,22 +110,41 @@ import { marca } from '../data/producto';
 	}
 
 	/* Header */
-	.header {
-		position: sticky;
-		top: 0;
-		background-color: rgba(242, 232, 213, 0.85);
-		backdrop-filter: blur(12px);
-		z-index: 1000;
-		border-bottom: 1px solid var(--color-border);
+	.site-header {
+		width: 100%;
+		background-color: var(--color-bg);
+		padding: 2.5rem 2rem 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.header-container {
 		max-width: 1200px;
-		margin: 0 auto;
-		padding: 1.2rem 2rem;
+		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+	}
+
+	.header-logo-img {
+		width: 100%;
+		max-width: 260px;
+		height: auto;
+		object-fit: contain;
+		display: block;
+	}
+
+	@media (max-width: 768px) {
+		.site-header {
+			padding: 1.5rem 1.5rem 0.5rem;
+		}
+		.header-container {
+			justify-content: flex-end;
+		}
+		.header-logo-img {
+			max-width: 105px;
+		}
 	}
 
 	.logo-area {
