@@ -63,7 +63,8 @@ import { marca, producto } from '../data/producto';
 				<nav class="mobile-nav-menu" id="mobileNavMenu">
 					<a href="#historia" class="mobile-nav-link">La Historia</a>
 					<a href="#quesera" class="mobile-nav-link">La Quesera</a>
-					<a href="#complementos" class="mobile-nav-link">El Cuchillo y La Tabla</a>
+					<a href="#cuchillo" class="mobile-nav-link">El cuchillo</a>
+					<a href="#tabla" class="mobile-nav-link">La tabla</a>
 					<a href="#reservar" class="mobile-nav-link">Reservar</a>
 				</nav>
 			</section>
@@ -144,10 +145,9 @@ import { marca, producto } from '../data/producto';
 				</div>
 			</section>
 
-			<!-- 5. Los complementos -->
-			<section id="complementos" class="colors-section">
+			<!-- 5. El cuchillo -->
+			<section id="cuchillo" class="colors-section">
 				<div class="section-container">
-					<!-- Bloque 1: El cuchillo -->
 					<span class="section-tag">El cuchillo</span>
 					<h2 class="section-title">Para quesos blandos.</h2>
 					<div class="complements-intro">
@@ -156,16 +156,18 @@ import { marca, producto } from '../data/producto';
 						<p>Mango de madera de mango, elaborado a mano en India — cada pieza con su propio veteado, ninguna exactamente igual a otra.</p>
 						<p>Y además de todo esto, muy fotografiable.</p>
 					</div>
+				</div>
+			</section>
 
-					<!-- Bloque 2: La tabla -->
-					<div class="complements-subgroup">
-						<span class="section-tag">La tabla</span>
-						<h2 class="section-title">Aquí empieza el festín.</h2>
-						<div class="complements-intro">
-							<p>Madera maciza de mango, la misma que acompaña a la quesera y al cuchillo, para que las tres piezas se reconozcan como lo que son: una sola familia. Alargada, con espacio de sobra para presentar una tabla de quesos.</p>
-							<p>Cada tabla tiene su propio veteado, sus propias vetas, su propio carácter. Ninguna sale exactamente igual de la anterior.</p>
-							<p>No la vas a guardar en un cajón. Se queda fuera, sobre la encimera, esperando la próxima vez que alguien se siente a la mesa contigo.</p>
-						</div>
+			<!-- 6. La tabla -->
+			<section id="tabla" class="colors-section tabla-section">
+				<div class="section-container">
+					<span class="section-tag">La tabla</span>
+					<h2 class="section-title">Aquí empieza el festín.</h2>
+					<div class="complements-intro">
+						<p>Madera maciza de mango, la misma que acompaña a la quesera y al cuchillo, para que las tres piezas se reconozcan como lo que son: una sola familia. Alargada, con espacio de sobra para presentar una tabla de quesos.</p>
+						<p>Cada tabla tiene su propio veteado, sus propias vetas, su propio carácter. Ninguna sale exactamente igual de la anterior.</p>
+						<p>No la vas a guardar en un cajón. Se queda fuera, sobre la encimera, esperando la próxima vez que alguien se siente a la mesa contigo.</p>
 					</div>
 				</div>
 			</section>
@@ -804,8 +806,9 @@ import { marca, producto } from '../data/producto';
 		background-color: var(--color-bg);
 	}
 
-	#complementos .section-container {
-		padding-top: 1rem;
+	#cuchillo .section-container,
+	#tabla .section-container {
+		padding-top: 1.5rem;
 	}
 
 	.complements-intro {
