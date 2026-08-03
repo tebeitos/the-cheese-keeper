@@ -31,8 +31,8 @@ import { marca, producto } from '../data/producto';
 					<div class="hero-menu">
 						<a href="#historia" class="hero-menu-link">La Historia</a>
 						<a href="#quesera" class="hero-menu-link">La Quesera</a>
-						<a href="#cuchillo" class="hero-menu-link">El cuchillo</a>
-						<a href="#tabla" class="hero-menu-link">La tabla</a>
+						<a href="#presentacion" class="hero-menu-link">La presentación</a>
+						<a href="#complementos" class="hero-menu-link">Los complementos</a>
 						<a href="#reservar" class="hero-menu-link">Reservar</a>
 					</div>
 				</div>
@@ -64,8 +64,8 @@ import { marca, producto } from '../data/producto';
 				<nav class="mobile-nav-menu" id="mobileNavMenu">
 					<a href="#historia" class="mobile-nav-link">La Historia</a>
 					<a href="#quesera" class="mobile-nav-link">La Quesera</a>
-					<a href="#cuchillo" class="mobile-nav-link">El cuchillo</a>
-					<a href="#tabla" class="mobile-nav-link">La tabla</a>
+					<a href="#presentacion" class="mobile-nav-link">La presentación</a>
+					<a href="#complementos" class="mobile-nav-link">Los complementos</a>
 					<a href="#reservar" class="mobile-nav-link">Reservar</a>
 				</nav>
 			</section>
@@ -161,7 +161,7 @@ import { marca, producto } from '../data/producto';
 			</section>
 
 			<!-- 5. La presentación (Packaging) -->
-			<section id="regalo" class="packaging-section">
+			<section id="presentacion" class="packaging-section">
 				<div class="section-container">
 					<span class="section-tag">La presentación</span>
 					<h2 class="section-title">Estás a punto de convertirte en el abuelo de alguien.</h2>
@@ -186,52 +186,55 @@ import { marca, producto } from '../data/producto';
 				</div>
 			</section>
 
-			<!-- 6. El cuchillo -->
-			<section id="cuchillo" class="colors-section">
+			<!-- 6. Los complementos (Cuchillo y Tabla) -->
+			<section id="complementos" class="colors-section">
 				<div class="section-container">
-					<span class="section-tag">El cuchillo</span>
-					<h2 class="section-title">Para quesos blandos.</h2>
-					<div class="complements-intro">
-						<p>Un buen queso de pasta blanda se corta con un buen cuchillo de pasta blanda.</p>
-						<p>Hoja fina de acero inoxidable, pensada específicamente para un Brie, un Camembert, una torta del casar que necesita abrirse por arriba o cualquier queso cremoso que necesite un trabajo fino y poca resistencia de la hoja.</p>
-						<p>Mango de madera de mango, elaborado a mano en India — cada pieza con su propio veteado, ninguna exactamente igual a otra.</p>
-						<p>Y además de todo esto, muy fotografiable.</p>
-					</div>
+					<span class="section-tag">Los complementos</span>
+					
+					<!-- Subbloque 1: El cuchillo -->
+					<div class="complement-subblock">
+						<h2 class="section-title">El cuchillo</h2>
+						<p class="complement-subtitle-tag">Para quesos blandos.</p>
+						<div class="complements-intro">
+							<p>Un buen queso de pasta blanda se corta con un buen cuchillo de pasta blanda.</p>
+							<p>Hoja fina de acero inoxidable, pensada específicamente para un Brie, un Camembert, una torta del casar que necesita abrirse por arriba o cualquier queso cremoso que necesite un trabajo fino y poca resistencia de la hoja.</p>
+							<p>Mango de madera de mango, elaborado a mano en India — cada pieza con su propio veteado, ninguna exactamente igual a otra.</p>
+							<p>Y además de todo esto, muy fotografiable.</p>
+						</div>
 
-					<!-- Hueco para la foto del cuchillo -->
-					<div class="product-image-placeholder">
-						<div class="placeholder-content">
-							<svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-								<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-								<circle cx="8.5" cy="8.5" r="1.5"></circle>
-								<polyline points="21 15 16 10 5 21"></polyline>
-							</svg>
-							<span class="placeholder-status">[ Pendiente: foto del cuchillo ]</span>
+						<!-- Hueco para la foto del cuchillo -->
+						<div class="product-image-placeholder">
+							<div class="placeholder-content">
+								<svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+									<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+									<circle cx="8.5" cy="8.5" r="1.5"></circle>
+									<polyline points="21 15 16 10 5 21"></polyline>
+								</svg>
+								<span class="placeholder-status">[ Pendiente: foto del cuchillo ]</span>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
 
-			<!-- 6. La tabla -->
-			<section id="tabla" class="colors-section tabla-section">
-				<div class="section-container">
-					<span class="section-tag">La tabla</span>
-					<h2 class="section-title">Aquí empieza el festín.</h2>
-					<div class="complements-intro">
-						<p>Madera maciza de mango, la misma que acompaña a la quesera y al cuchillo, para que las tres piezas se reconozcan como lo que son: una sola familia. Alargada, con espacio de sobra para presentar una tabla de quesos.</p>
-						<p>Cada tabla tiene su propio veteado, sus propias vetas, su propio carácter. Ninguna sale exactamente igual de la anterior.</p>
-						<p>No la vas a guardar en un cajón. Se queda fuera, sobre la encimera, esperando la próxima vez que alguien se siente a la mesa contigo.</p>
-					</div>
+					<!-- Subbloque 2: La tabla -->
+					<div class="complement-subblock">
+						<h2 class="section-title">La tabla</h2>
+						<p class="complement-subtitle-tag">Aquí empieza el festín.</p>
+						<div class="complements-intro">
+							<p>Madera maciza de mango, la misma que acompaña a la quesera y al cuchillo, para que las tres piezas se reconozcan como lo que son: una sola familia. Alargada, con espacio de sobra para presentar una tabla de quesos.</p>
+							<p>Cada tabla tiene su propio veteado, sus propias vetas, su propio carácter. Ninguna sale exactamente igual de la anterior.</p>
+							<p>No la vas a guardar en un cajón. Se queda fuera, sobre la encimera, esperando la próxima vez que alguien se siente a la mesa contigo.</p>
+						</div>
 
-					<!-- Hueco para la foto de la tabla -->
-					<div class="product-image-placeholder">
-						<div class="placeholder-content">
-							<svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-								<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-								<circle cx="8.5" cy="8.5" r="1.5"></circle>
-								<polyline points="21 15 16 10 5 21"></polyline>
-							</svg>
-							<span class="placeholder-status">[ Pendiente: foto de la tabla ]</span>
+						<!-- Hueco para la foto de la tabla -->
+						<div class="product-image-placeholder">
+							<div class="placeholder-content">
+								<svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+									<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+									<circle cx="8.5" cy="8.5" r="1.5"></circle>
+									<polyline points="21 15 16 10 5 21"></polyline>
+								</svg>
+								<span class="placeholder-status">[ Pendiente: foto de la tabla ]</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -895,17 +898,31 @@ import { marca, producto } from '../data/producto';
 		background-color: var(--color-bg);
 	}
 
-	#cuchillo .section-container {
-		padding-top: 0.4rem;
-	}
-
-	#tabla .section-container,
-	#regalo .section-container {
+	#presentacion .section-container,
+	#complementos .section-container {
 		padding-top: 1rem;
 	}
 
 	#reservar .section-container {
 		padding-top: 2rem;
+	}
+
+	.complement-subblock {
+		margin-top: 1.5rem;
+	}
+
+	.complement-subblock + .complement-subblock {
+		margin-top: 3.5rem;
+		padding-top: 2.5rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.complement-subtitle-tag {
+		font-size: 1.15rem;
+		font-weight: 500;
+		color: var(--color-text);
+		margin-bottom: 1.25rem;
+		margin-top: -0.8rem;
 	}
 
 	.complements-intro {
