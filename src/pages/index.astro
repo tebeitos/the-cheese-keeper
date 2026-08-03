@@ -897,11 +897,14 @@ import { marca, producto } from '../data/producto';
 		scroll-margin-top: 15px;
 	}
 
-	.colors-section {
-		background-color: var(--color-bg);
+	#historia {
+		scroll-margin-top: 0px;
 	}
 
-	#historia .section-container,
+	#historia .section-container {
+		padding-top: 2.5rem;
+	}
+
 	#quesera .section-container,
 	#presentacion .section-container,
 	#complementos .section-container,
@@ -914,7 +917,14 @@ import { marca, producto } from '../data/producto';
 			scroll-margin-top: 75px; /* Deja espacio por debajo de la barra superior fija de móvil */
 		}
 
-		#historia .section-container,
+		#historia {
+			scroll-margin-top: 70px;
+		}
+
+		#historia .section-container {
+			padding-top: 1.5rem;
+		}
+
 		#quesera .section-container,
 		#presentacion .section-container,
 		#complementos .section-container,
