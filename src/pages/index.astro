@@ -1237,6 +1237,20 @@ import { marca, producto } from '../data/producto';
 		user-select: none;
 	}
 
+	@media (max-width: 600px) {
+		.privacy-check {
+			font-size: 0.75rem;
+			gap: 0.4rem;
+			white-space: nowrap;
+		}
+
+		.privacy-check input[type="checkbox"] {
+			width: 15px;
+			height: 15px;
+			flex-shrink: 0;
+		}
+	}
+
 	.privacy-check input[type="checkbox"] {
 		width: 17px;
 		height: 17px;
