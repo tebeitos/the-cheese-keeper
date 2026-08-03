@@ -888,26 +888,39 @@ import { marca, producto } from '../data/producto';
 		margin: 0 auto;
 	}
 
-	#quesera .section-container {
-		padding-top: 0px;
+	/* --- 5. SECCIONES Y SCROLL --- */
+	html {
+		scroll-behavior: smooth;
 	}
 
-	/* --- 5. SECCIONES Y SCROLL --- */
 	section {
-		scroll-margin-top: 60px;
+		scroll-margin-top: 15px;
 	}
 
 	.colors-section {
 		background-color: var(--color-bg);
 	}
 
+	#historia .section-container,
+	#quesera .section-container,
 	#presentacion .section-container,
-	#complementos .section-container {
-		padding-top: 1rem;
+	#complementos .section-container,
+	#reservar .section-container {
+		padding-top: 1.25rem;
 	}
 
-	#reservar .section-container {
-		padding-top: 2rem;
+	@media (max-width: 768px) {
+		section {
+			scroll-margin-top: 75px; /* Deja espacio por debajo de la barra superior fija de móvil */
+		}
+
+		#historia .section-container,
+		#quesera .section-container,
+		#presentacion .section-container,
+		#complementos .section-container,
+		#reservar .section-container {
+			padding-top: 1rem;
+		}
 	}
 
 	.complement-subblock {
