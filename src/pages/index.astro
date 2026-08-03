@@ -117,7 +117,7 @@ import { marca, producto } from '../data/producto';
 			<section id="quesera" class="product-section">
 				<div class="section-container narrow-container">
 					<span class="section-tag">La Quesera</span>
-					<h2 class="section-title">El alma de la mesa.</h2>
+					<h2 class="section-title">La del 2026.</h2>
 					
 					<!-- Vídeo demostración del producto -->
 					<div class="product-video-wrapper">
@@ -132,22 +132,29 @@ import { marca, producto } from '../data/producto';
 							<div class="feature-icon-wrapper">
 								<span class="feature-num">01</span>
 							</div>
-							<h3>Campana de Aluminio</h3>
-							<p>Esmaltado en rojo con las palabras Cheese y Fromage. Protege el queso de la luz directa y mantiene la humedad óptima.</p>
+							<h3>Rediseño XL.</h3>
+							<p>Más grande para los que como nosotros nos gusta tener más de un queso bien a mano.</p>
 						</div>
 						<div class="feature-card">
 							<div class="feature-icon-wrapper">
 								<span class="feature-num">02</span>
 							</div>
-							<h3>Madera de Mango</h3>
-							<p>Una tabla robusta con acabado con cera natural.</p>
+							<h3>Campana de aluminio</h3>
+							<p>Esmaltado en rojo con las palabras Cheese y Fromage. Protege el queso de la luz directa y mantiene la humedad óptima.</p>
 						</div>
 						<div class="feature-card">
 							<div class="feature-icon-wrapper">
 								<span class="feature-num">03</span>
 							</div>
+							<h3>Madera de mango</h3>
+							<p>Una tabla robusta con acabado con cera natural.</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-icon-wrapper">
+								<span class="feature-num">04</span>
+							</div>
 							<h3>Fabricada en India</h3>
-							<p>Construída de manera artesanal con materias primas sostenibles.</p>
+							<p>Construída con materias primas sostenibles.</p>
 						</div>
 					</div>
 				</div>
@@ -792,15 +799,22 @@ import { marca, producto } from '../data/producto';
 
 	.product-features {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2.5rem;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.8rem;
 		margin: 2.5rem 0 1.5rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
+		.product-features {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.8rem;
+		}
+	}
+
+	@media (max-width: 600px) {
 		.product-features {
 			grid-template-columns: 1fr;
-			gap: 2rem;
+			gap: 1.5rem;
 		}
 
 		.feature-card {
