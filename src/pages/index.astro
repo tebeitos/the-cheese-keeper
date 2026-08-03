@@ -817,14 +817,20 @@ import { marca, producto } from '../data/producto';
 	@media (max-width: 600px) {
 		.product-features {
 			grid-template-columns: 1fr;
-			gap: 1.5rem;
+			gap: 1rem;
+			margin: 1.5rem 0 1rem;
 		}
 
 		.feature-card {
+			padding: 1.25rem 1.25rem;
 			text-align: center;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+		}
+
+		.feature-icon-wrapper {
+			margin-bottom: 0.5rem;
 		}
 
 		.color-block-card {
