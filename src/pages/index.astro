@@ -85,6 +85,10 @@ import { marca, producto } from '../data/producto';
 
 						<p>Cincuenta años después, aquella quesera permanecía prácticamente indestructible y hoy es una de mis herencias más preciadas.</p>
 
+						<div class="story-img-wrapper">
+							<img src="/quesera original.jpg" alt="La quesera original de mi abuelo" class="story-original-img" />
+						</div>
+
 						<p>Seguramente tú también tengas una historia parecida.</p>
 
 						<p>Un objeto de tu familia que no era ni el más caro ni el más nuevo, pero que seguía ahí, año tras año, cuando todo lo demás se había roto o pasado de moda.</p>
@@ -689,6 +693,22 @@ import { marca, producto } from '../data/producto';
 		font-size: 1.05rem;
 		color: var(--color-text-light);
 		line-height: 1.7;
+	}
+
+	.story-img-wrapper {
+		margin: 2rem 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	.story-original-img {
+		width: 100%;
+		max-width: 260px;
+		height: auto;
+		border-radius: 16px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+		border: 1px solid var(--color-border);
+		object-fit: cover;
 	}
 
 	.story blockquote {
