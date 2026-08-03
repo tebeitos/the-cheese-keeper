@@ -892,43 +892,25 @@ import { marca, producto } from '../data/producto';
 		scroll-behavior: smooth;
 	}
 
-	section {
-		scroll-margin-top: 15px;
+	section[id] {
+		scroll-margin-top: 25px;
 	}
 
-	#historia {
-		scroll-margin-top: 0px;
+	.colors-section {
+		background-color: var(--color-bg);
 	}
 
-	#historia .section-container {
-		padding-top: 2.5rem;
-	}
-
-	#quesera .section-container,
-	#presentacion .section-container,
-	#complementos .section-container,
-	#reservar .section-container {
-		padding-top: 1.25rem;
+	.section-container {
+		padding-top: 1.5rem;
 	}
 
 	@media (max-width: 768px) {
-		section {
-			scroll-margin-top: 75px; /* Deja espacio por debajo de la barra superior fija de móvil */
+		section[id] {
+			scroll-margin-top: 90px; /* Ajustado a la altura de la cabecera fija de móvil + aire */
 		}
 
-		#historia {
-			scroll-margin-top: 70px;
-		}
-
-		#historia .section-container {
-			padding-top: 1.5rem;
-		}
-
-		#quesera .section-container,
-		#presentacion .section-container,
-		#complementos .section-container,
-		#reservar .section-container {
-			padding-top: 1rem;
+		.section-container {
+			padding-top: 1.25rem;
 		}
 	}
 
