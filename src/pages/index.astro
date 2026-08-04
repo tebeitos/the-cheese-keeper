@@ -783,20 +783,20 @@ import { marca, producto } from '../data/producto';
 
 	.product-video-wrapper {
 		margin: 2rem auto 3rem;
-		max-width: 900px;
-		height: auto;
+		width: 55%;
+		max-width: 420px;
+		aspect-ratio: 9 / 16;
 		border-radius: 20px;
 		overflow: hidden;
 		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
 		border: 1px solid var(--color-border);
 		background-color: var(--color-bg);
-		width: 100%;
 	}
 
 	video,
 	.product-video {
 		width: 100%;
-		height: auto;
+		height: 100%;
 		object-fit: cover;
 		display: block;
 	}
@@ -816,6 +816,12 @@ import { marca, producto } from '../data/producto';
 	}
 
 	@media (max-width: 600px) {
+		.product-video-wrapper {
+			width: 85%;
+			max-width: 340px;
+			margin: 1.5rem auto 2.5rem;
+		}
+
 		.product-features {
 			grid-template-columns: 1fr;
 			gap: 1rem;
