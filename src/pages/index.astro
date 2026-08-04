@@ -119,7 +119,7 @@ import { marca, producto } from '../data/producto';
 					
 					<!-- Vídeo demostración del producto -->
 					<div class="product-video-wrapper">
-						<video class="product-video" width="100%" autoplay loop muted playsinline poster="/quesera-home.png">
+						<video class="product-video" autoplay loop muted playsinline poster="/quesera-home.png">
 							<source src="/video quesera.mp4" type="video/mp4" />
 							Tu navegador no soporta la reproducción de vídeo HTML5.
 						</video>
@@ -782,23 +782,22 @@ import { marca, producto } from '../data/producto';
 	}
 
 	.product-video-wrapper {
+		width: 100%;
+		max-width: 800px;
 		margin: 2rem auto 3rem;
-		width: 50%;
-		max-width: 420px;
-		aspect-ratio: 9 / 16;
-		border-radius: 20px;
+		aspect-ratio: 16 / 9;
 		overflow: hidden;
+		border-radius: 12px;
 		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
 		border: 1px solid var(--color-border);
-		background-color: #F2E8D5;
+		background-color: var(--color-bg);
 	}
 
 	video,
 	.product-video {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
-		background-color: #F2E8D5;
+		object-fit: cover;
 		display: block;
 	}
 
@@ -817,12 +816,6 @@ import { marca, producto } from '../data/producto';
 	}
 
 	@media (max-width: 600px) {
-		.product-video-wrapper {
-			width: 85%;
-			max-width: 340px;
-			margin: 1.5rem auto 2.5rem;
-		}
-
 		.product-features {
 			grid-template-columns: 1fr;
 			gap: 1rem;
